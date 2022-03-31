@@ -1,5 +1,5 @@
 # GO_NN
-## Prerequisites
+## Environments
 * python 2.7, check environments.yml for needed packages
 
 ## Installation
