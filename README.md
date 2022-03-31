@@ -13,3 +13,20 @@
   conda env create --name gonn --file=environment.yml
   ```
 ## Usage
+
+1. Activate the created conda environment
+  ```sh
+  source activate gonn
+  ```
+2. Add current directory to PYTHONPATH
+  ```sh
+  export PYTHONPATH=~/GO_NN:$PYTHONPATH
+  ```
+3. To train the model, run
+  ```sh
+  cd ./train
+  python run_me.py
+  ```
+## License
+
+Distributed under the GPL-2.0 License. See `LICENSE` for more information
