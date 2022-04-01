@@ -1,4 +1,9 @@
 # GO_NN
+
+## Description 
+
+* Gene Ontology informed neural network model formicrobe functionality discovery in human diseases.
+
 ## Environments
 * python 2.7, check environments.yml for needed packages
 
