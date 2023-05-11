@@ -32,6 +32,13 @@
   cd ./train
   python run_me.py
   ```
+  
+## Data Avilibility
+
+* The datasets generated
+and analysed during the current study are publicly available in the Science Data Bank repository at
+https://doi.org/10.57760/sciencedb.01684
+
 ## License
 
 Distributed under the GPL-2.0 License. See `LICENSE` for more information
