@@ -22,17 +22,17 @@ class CRCData():
 
         self.training_split = training_split
         if feature=='gene_1p':
-            tpm_file = join(crc_path,'GONET_tpm_dataset_1p.csv')
+            tpm_file = join(crc_path,'GONET_crc_tpm_dataset_1p.csv')
         elif feature=='gene_5p':
-            tpm_file = join(crc_path,'GONET_tpm_dataset_5p.csv')
+            tpm_file = join(crc_path,'GONET_crc_tpm_dataset_5p.csv')
         elif feature=='gene_10p':
-            tpm_file = join(crc_path,'GONET_tpm_dataset_10p.csv')
+            tpm_file = join(crc_path,'GONET_crc_tpm_dataset_10p.csv')
         #tpm_file = join(crc_path,'GONET_tpm_dataset_1p.csv')
         #tpm_file = join(crc_path,'GONET_tpm_dataset_5p.csv')
         #tpm_file = join(crc_path,'GONET_tpm_dataset_10p.csv')
         #tpm_file = join(crc_path,'GONET_lc_tpm.csv')
-        dia_file = join(crc_path,'disease.csv')
-        id_file = join(crc_path,'id_with_label.csv')
+        dia_file = join(crc_path,'crc_disease.csv')
+        id_file = join(crc_path,'crc_id_with_label.csv')
         tpm = pd.read_csv(tpm_file, header=0, low_memory=False)
         dia = pd.read_csv(dia_file, header=0)
         iddf = pd.read_csv(id_file, header=0)
