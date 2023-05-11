@@ -21,11 +21,11 @@ class LCData():
 
         self.training_split = training_split
         if feature=='gene_1p':
-            tpm_file = join(lc_path,'GONET_tpm_dataset_1p.csv')
+            tpm_file = join(lc_path,'GONET_lc_tpm_dataset_1p.csv')
         elif feature=='gene_5p':
-            tpm_file = join(lc_path,'GONET_tpm_dataset_5p.csv')
+            tpm_file = join(lc_path,'GONET_lc_tpm_dataset_5p.csv')
         elif feature=='gene_10p':
-            tpm_file = join(lc_path,'GONET_tpm_dataset_10p.csv')
+            tpm_file = join(lc_path,'GONET_lc_tpm_dataset_10p.csv')
 
         #tpm_file = join(lc_path,'GONET_tpm_dataset_1p.csv')
         #tpm_file = join(lc_path,'GONET_tpm_dataset_5p.csv')
