@@ -12,7 +12,7 @@ diabetes_path=DIABETES_DATA_PATH
 
 class DiabetesData():
 
-    def __init__(self, data_type='mut', account_for_data_type=None, cnv_levels=5,
+    def __init__(self,feature='gene_1p', data_type='mut', account_for_data_type=None, cnv_levels=5,
                  cnv_filter_single_event=True, mut_binary=False,
                  selected_genes=None, combine_type='intersection',
                  use_coding_genes_only=False, drop_AR=False,
@@ -20,10 +20,20 @@ class DiabetesData():
                  shuffle=False, selected_samples=None, training_split=0):
 
         self.training_split = training_split
-
-        #tpm_file = join(diabetes_path,'GONET_tpm_dataset_1p.csv')
-        #tpm_file = join(diabetes_path,'GONET_tpm_dataset_5p.csv')
-        tpm_file = join(diabetes_path,'GONET_tpm_dataset_10p.csv')
+        if feature=='gene_1p':
+            tpm_file = join(diabetes_path,'GONET_tpm_dataset_1p.csv')
+        elif feature=='gene_5p':
+            tpm_file = join(diabetes_path,'GONET_tpm_dataset_5p.csv')
+        elif feature=='gene_10p':
+            tpm_file = join(diabetes_path,'GONET_tpm_dataset_10p.csv')
+        elif feature=='3mer':
+            tpm_file = join(diabetes_path,'3mer.csv')
+        elif feature=='4mer':
+            tpm_file = join(diabetes_path,'4mer.csv')
+        elif feature=='5mer':
+            tpm_file = join(diabetes_path,'5mer.csv')
+        elif feature=='6mer':
+            tpm_file = join(diabetes_path,'6mer.csv')
         #tpm_file = join(diabetes_path,'GONET_tpm_dataset.csv')
         dia_file = join(diabetes_path,'GONET_dia_status.csv')
         id_file = join(diabetes_path,'dia_with_id.csv')
@@ -31,6 +41,7 @@ class DiabetesData():
         dia = pd.read_csv(dia_file, header=0)
         iddf = pd.read_csv(id_file, header=0)
         x = tpm
+        ##x.fillna(0)
         y = dia
         rows = iddf['Run']
         cols = tpm.columns
@@ -39,7 +50,8 @@ class DiabetesData():
             x = x.values
         if type(y) == pd.DataFrame:
             y = y.values
-
+        x[np.isnan(x)] = 0
+        y =y.astype(int)
         if balanced_data:
             pos_ind = np.where(y == 1.)[0]
             neg_ind = np.where(y == 0.)[0]
