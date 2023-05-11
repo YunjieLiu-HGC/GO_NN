@@ -27,7 +27,9 @@
   ```sh
   export PYTHONPATH=~/GO_NN:$PYTHONPATH
   ```
-3. To train the model, run
+3. Download the dataset from https://doi.org/10.57760/sciencedb.01684 into data/dataset/
+
+4. To train the model, run
   ```sh
   cd ./train
   python run_me.py
