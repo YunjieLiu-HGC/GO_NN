@@ -22,17 +22,17 @@ class IBDData():
 
         self.training_split = training_split
         if feature=='gene_1p':
-            tpm_file = join(ibd_path,'GONET_tpm_dataset_1p.csv')
+            tpm_file = join(ibd_path,'GONET_ibd_tpm_dataset_1p.csv')
         elif feature=='gene_5p':
-            tpm_file = join(ibd_path,'GONET_tpm_dataset_5p.csv')
+            tpm_file = join(ibd_path,'GONET_ibd_tpm_dataset_5p.csv')
         elif feature=='gene_10p':
-            tpm_file = join(ibd_path,'GONET_tpm_dataset_10p.csv')
+            tpm_file = join(ibd_path,'GONET_ibd_tpm_dataset_10p.csv')
         #tpm_file = join(ibd_path,'GONET_tpm_dataset_1p.csv')
         #tpm_file = join(ibd_path,'GONET_tpm_dataset_5p.csv')
         #tpm_file = join(ibd_path,'GONET_tpm_dataset_10p.csv')
         #tpm_file = join(ibd_path,'GONET_lc_tpm.csv')
         dia_file = join(ibd_path,'ibd_status.csv')
-        id_file = join(ibd_path,'sample_with_status.csv')
+        id_file = join(ibd_path,'ibd_sample_with_status.csv')
         tpm = pd.read_csv(tpm_file, header=0, low_memory=False)
         dia = pd.read_csv(dia_file, header=0)
         iddf = pd.read_csv(id_file, header=0)
