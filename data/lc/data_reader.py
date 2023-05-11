@@ -12,7 +12,7 @@ lc_path=LC_DATA_PATH
 
 class LCData():
 
-    def __init__(self, data_type='mut', account_for_data_type=None, cnv_levels=5,
+    def __init__(self,feature='gene_1p', data_type='mut', account_for_data_type=None, cnv_levels=5,
                  cnv_filter_single_event=True, mut_binary=False,
                  selected_genes=None, combine_type='intersection',
                  use_coding_genes_only=False, drop_AR=False,
@@ -20,9 +20,16 @@ class LCData():
                  shuffle=False, selected_samples=None, training_split=0):
 
         self.training_split = training_split
+        if feature=='gene_1p':
+            tpm_file = join(lc_path,'GONET_tpm_dataset_1p.csv')
+        elif feature=='gene_5p':
+            tpm_file = join(lc_path,'GONET_tpm_dataset_5p.csv')
+        elif feature=='gene_10p':
+            tpm_file = join(lc_path,'GONET_tpm_dataset_10p.csv')
+
         #tpm_file = join(lc_path,'GONET_tpm_dataset_1p.csv')
         #tpm_file = join(lc_path,'GONET_tpm_dataset_5p.csv')
-        tpm_file = join(lc_path,'GONET_tpm_dataset_10p.csv')
+        #tpm_file = join(lc_path,'GONET_tpm_dataset_10p.csv')
         #tpm_file = join(lc_path,'GONET_lc_tpm.csv')
         dia_file = join(lc_path,'GONET_lc_status.csv')
         id_file = join(lc_path,'lc_with_id.csv')
