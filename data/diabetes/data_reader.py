@@ -21,11 +21,11 @@ class DiabetesData():
 
         self.training_split = training_split
         if feature=='gene_1p':
-            tpm_file = join(diabetes_path,'GONET_tpm_dataset_1p.csv')
+            tpm_file = join(diabetes_path,'GONET_dia_tpm_dataset_1p.csv')
         elif feature=='gene_5p':
-            tpm_file = join(diabetes_path,'GONET_tpm_dataset_5p.csv')
+            tpm_file = join(diabetes_path,'GONET_dia_tpm_dataset_5p.csv')
         elif feature=='gene_10p':
-            tpm_file = join(diabetes_path,'GONET_tpm_dataset_10p.csv')
+            tpm_file = join(diabetes_path,'GONET_dia_tpm_dataset_10p.csv')
         elif feature=='3mer':
             tpm_file = join(diabetes_path,'3mer.csv')
         elif feature=='4mer':
