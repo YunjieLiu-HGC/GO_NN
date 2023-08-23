@@ -1,3 +1,5 @@
+#Created by P-NET https://github.com/marakeby/pnet_prostate_paper
+#Modified by Yunjie Liu
 import sys
 from os.path import join, dirname, realpath
 current_dir = dirname(realpath(__file__))
