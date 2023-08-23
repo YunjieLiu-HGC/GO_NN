@@ -41,6 +41,12 @@
 and analysed during the current study are publicly available in the Science Data Bank repository at
 https://doi.org/10.57760/sciencedb.01684
 
+
+## Reference
+
+The model is constructed base on P-NET.
+https://github.com/marakeby/pnet_prostate_paper
+
 ## License
 
 Distributed under the GPL-2.0 License. See `LICENSE` for more information
